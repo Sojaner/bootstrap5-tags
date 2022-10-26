@@ -58,7 +58,7 @@ class Tags {
     this.debounceTime = opts.debounceTime ? parseInt(opts.debounceTime) : 300;
     this.baseClass = opts.baseClass || "";
     this.placeholder = opts.placeholder || this._getPlaceholder();
-    this.hidePlaceholder = opts.hidePlaceholder || true;
+    this.hidePlaceholder = typeof(opts.hidePlaceholder) === "boolean" ? opts.hidePlaceholder : true;
     // private vars
     this._keyboardNavigation = false;
     this._fireEvents = true;
