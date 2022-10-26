@@ -58,6 +58,7 @@ class Tags {
     this.debounceTime = opts.debounceTime ? parseInt(opts.debounceTime) : 300;
     this.baseClass = opts.baseClass || "";
     this.placeholder = opts.placeholder || this._getPlaceholder();
+    this.hidePlaceholder = opts.hidePlaceholder || true;
     // private vars
     this._keyboardNavigation = false;
     this._fireEvents = true;
@@ -511,7 +512,7 @@ class Tags {
       this._searchInput.size = this._searchInput.value.length;
     } else {
       // Show the placeholder only if empty
-      if (this.getSelectedValues().length) {
+      if (this.getSelectedValues().length && this.hidePlaceholder) {
         this._searchInput.placeholder = "";
         this._searchInput.size = 1;
       } else {

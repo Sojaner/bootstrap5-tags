@@ -4,6 +4,8 @@
   "version": "1.4.40",
   "description": "Replace select[multiple] with nices badges for Bootstrap 5",
   "main": "tags",
+  "types": "tags.d.ts",
+  "typings": "./tags.d.ts",
   "scripts": {
     "test": "ava",
     "build": "esbuild --mangle-props=^_ --bundle --minify --format=esm --sourcemap tags.js --outfile=tags.min.js",
