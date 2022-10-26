@@ -21,7 +21,7 @@ type GlobalOptions = {
   fullWidth?: boolean;
   debounceTime?: number;
   baseClass?: string;
-  hidePlaceholder?: string;
+  hidePlaceholder?: boolean;
 }
 export default class Tags {
   constructor(el: HTMLSelectElement, globalOptions: GlobalOptions);
