@@ -23,7 +23,7 @@ type GlobalOptions = {
   baseClass?: string;
   hidePlaceholder?: string;
 }
-export class Tags {
+export default class Tags {
   constructor(el: HTMLSelectElement, globalOptions: GlobalOptions);
   /**
    * Attach to all elements matched by the selector
