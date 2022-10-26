@@ -323,7 +323,7 @@ class Tags {
     // beforeinput e.data is null on firefox
     // don't use them! rely on actual value
     this._searchInput.addEventListener("input", (ev) => {
-      const data = ev.target.value.replace(ev.target.dataset.tmp ?? "", "");
+      const data = ev.target.value.replace(ev.target.dataset.tmp || "", "");
       // Add item if a separator is used
       // On mobile or copy paste, it can pass multiple chars (eg: when pressing space and it formats the string)
       if (data) {
